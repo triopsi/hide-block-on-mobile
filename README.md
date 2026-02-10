@@ -1,16 +1,26 @@
+
+
 # Hide Block On Mobile
 
-A WordPress plugin that adds a toggle control to the block inspector, allowing you to hide any Gutenberg block on mobile devices.
+A WordPress plugin that adds responsive visibility controls to the block inspector, allowing you to hide any Gutenberg block on mobile or desktop devices.
+
+<p align="center">
+  <img src="gutenberg-editor-settings-block.png" alt="Gutenberg Editor Screenshot">
+</p>
 
 ## Description
 
-This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsive" panel to every block's settings sidebar. Simply toggle "Hide on mobile" to add the `hide-mobile` CSS class to any block, which will hide it on screens smaller than 768px.
+This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsive" panel to every block's settings sidebar. Control the visibility of your blocks across different devices:
+
+- **Hide on mobile**: Adds the `hide-mobile` CSS class - hides blocks on screens smaller than 768px
+- **Hide on desktop**: Adds the `hide-desktop` CSS class - hides blocks on screens larger than 768px
 
 **Features:**
 - Works with all Gutenberg blocks (core and third-party)
-- Simple toggle control in the block inspector
-- Adds CSS class automatically
-- Visual indicator in the editor when blocks are hidden on mobile
+- Two independent toggle controls in the block inspector
+- Adds CSS classes automatically
+- Visual indicators in the editor when blocks are hidden
+- Both options can be used simultaneously if needed
 - No configuration needed - activate and use
 
 ## Installation
@@ -28,10 +38,16 @@ This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsi
 ## Usage
 
 1. Open the WordPress block editor (Gutenberg)
-2. Select any block you want to hide on mobile
+2. Select any block you want to control
 3. In the right sidebar, find the "Responsive" panel
-4. Toggle "Hide on mobile" to enable/disable
-5. The block will be hidden on mobile devices (max-width: 768px)
+4. Toggle "Hide on mobile" to hide the block on mobile devices (max-width: 768px)
+5. Toggle "Hide on desktop" to hide the block on desktop devices (min-width: 769px)
+6. You can enable both options if you want to hide the block everywhere (useful for draft content)
+
+**Editor Visual Indicators:**
+- Blocks with "Hide on mobile" show a black dashed outline with a label
+- Blocks with "Hide on desktop" show a blue dashed outline with a label
+- Blocks with both options show a purple dashed outline with a combined label
 
 ## Development
 
@@ -74,3 +90,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 - WordPress 6.8 or higher
 - PHP 7.4 or higher
 - Node.js and npm (for development)
+
+## Screenshot
+<img src="screenshot-1.png" alt="Gutenberg Editor Screenshot 2">

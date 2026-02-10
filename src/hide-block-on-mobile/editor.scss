@@ -23,3 +23,39 @@
   pointer-events: none;
 }
 
+/* hide elements on desktop (editor preview: only mark, do NOT hide) */
+.hide-desktop {
+  opacity: 0.45;
+  outline: 2px dashed #1e90ff;
+  outline-offset: 4px;
+
+  position: relative;
+}
+
+.hide-desktop::before {
+  content: "Hidden on desktop";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 11px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(30, 144, 255, 0.85);
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* When both are active */
+.hide-mobile.hide-desktop {
+  outline: 2px dashed #9370db;
+}
+
+.hide-mobile.hide-desktop::before {
+  content: "Hidden on mobile & desktop";
+  background: rgba(147, 112, 219, 0.85);
+  left: 50%;
+  transform: translateX(-50%);
+}
+

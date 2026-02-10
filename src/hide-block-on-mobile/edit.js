@@ -12,7 +12,7 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 	(BlockEdit) =>
 		(props) => {
 			const { attributes, setAttributes } = props;
-			const { hideOnMobile } = attributes;
+			const { hideOnMobile, hideOnDesktop } = attributes;
 
 			return (
 				<Fragment>
@@ -26,6 +26,14 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 									setAttributes({ hideOnMobile: !!value })
 								}
 								help={__('Hides this block on mobile devices (max-width: 768px).', 'hide-block-on-mobile')}
+							/>
+							<ToggleControl
+								label={__('Hide on desktop', 'hide-block-on-mobile')}
+								checked={!!hideOnDesktop}
+								onChange={(value) =>
+									setAttributes({ hideOnDesktop: !!value })
+								}
+								help={__('Hides this block on desktop devices (min-width: 769px).', 'hide-block-on-mobile')}
 							/>
 						</PanelBody>
 					</InspectorControls>
@@ -41,13 +49,17 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 export const withHideMobileClassInEditor = createHigherOrderComponent(
 	(BlockListBlock) =>
 		(props) => {
-			if (!props?.attributes?.hideOnMobile) {
+			const { hideOnMobile, hideOnDesktop } = props?.attributes || {};
+			
+			if (!hideOnMobile && !hideOnDesktop) {
 				return <BlockListBlock {...props} />;
 			}
 
-			const className = [props.className, 'hide-mobile']
-				.filter(Boolean)
-				.join(' ');
+			const classes = [props.className];
+			if (hideOnMobile) classes.push('hide-mobile');
+			if (hideOnDesktop) classes.push('hide-desktop');
+
+			const className = classes.filter(Boolean).join(' ');
 
 			return <BlockListBlock {...props} className={className} />;
 		},

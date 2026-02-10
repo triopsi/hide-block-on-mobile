@@ -1,55 +1,103 @@
 === Hide Block On Mobile ===
 Contributors:      The WordPress Contributors
-Tags:              block
+Tags:              block, gutenberg, responsive, mobile, hide, visibility
+Requires at least: 6.8
 Tested up to:      6.8
+Requires PHP:      7.4
 Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+Control block visibility on mobile and desktop devices with simple toggle controls in the Gutenberg editor.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+Hide Block On Mobile extends the WordPress block editor (Gutenberg) by adding responsive visibility controls to every block's settings sidebar. Control which blocks appear on mobile devices, desktop devices, or both.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Key Features:**
+
+* **Hide on Mobile** - Hide blocks on screens smaller than 768px
+* **Hide on Desktop** - Hide blocks on screens larger than 768px
+* **Works with all Blocks** - Compatible with core blocks and third-party blocks
+* **Visual Indicators** - See which blocks are hidden directly in the editor
+* **No Configuration** - Install, activate, and start using immediately
+* **Simple Toggle Controls** - Easy-to-use switches in the block inspector
+* **CSS-Based** - Lightweight solution using CSS classes
+
+Perfect for creating responsive designs where certain content should only appear on specific devices. For example, show a detailed table only on desktop while displaying a simplified version on mobile.
+
+Both options can be used simultaneously if needed (useful for draft content or A/B testing).
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+= Automatic Installation =
 
-e.g.
+1. Log in to your WordPress admin panel
+2. Navigate to Plugins > Add New
+3. Search for "Hide Block On Mobile"
+4. Click "Install Now" and then "Activate"
 
-1. Upload the plugin files to the `/wp-content/plugins/hide-block-on-mobile` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+= Manual Installation =
+
+1. Download the plugin files
+2. Upload the `hide-block-on-mobile` folder to the `/wp-content/plugins/` directory
+3. Activate the plugin through the 'Plugins' screen in WordPress
+
+= After Activation =
+
+1. Edit any post or page with the block editor (Gutenberg)
+2. Select any block
+3. Look for the "Responsive" panel in the right sidebar (Block settings)
+4. Toggle "Hide on mobile" or "Hide on desktop" as needed
 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Does this work with all blocks? =
 
-An answer to that question.
+Yes! The plugin adds the responsive controls to all Gutenberg blocks, including core blocks (like Paragraph, Image, Heading) and third-party blocks from other plugins.
 
-= What about foo bar? =
+= What is the breakpoint for mobile vs desktop? =
 
-Answer to foo bar dilemma.
+The plugin uses 768px as the breakpoint:
+* Mobile: max-width 768px
+* Desktop: min-width 769px
+
+= Can I use both options at the same time? =
+
+Yes, you can enable both "Hide on mobile" and "Hide on desktop" simultaneously. This is useful for draft content that you want to temporarily hide everywhere, or for A/B testing purposes.
+
+= Will this affect my page performance? =
+
+The plugin is very lightweight and uses only CSS to hide blocks. There is no JavaScript overhead on the frontend, so performance impact is minimal.
+
+= Can I see which blocks are hidden in the editor? =
+
+Yes! Blocks with visibility settings show visual indicators in the editor:
+* "Hide on mobile" - black dashed outline with label
+* "Hide on desktop" - blue dashed outline with label
+* Both enabled - purple dashed outline with combined label
+
+= Does this plugin create custom blocks? =
+
+No, this plugin doesn't create any new blocks. It adds functionality to existing blocks by extending the block inspector with responsive visibility controls.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. The Responsive panel in the block inspector with "Hide on mobile" and "Hide on desktop" toggle controls
+2. Visual indicators in the editor showing which blocks are hidden on mobile (black outline) and desktop (blue outline)
 
 == Changelog ==
 
 = 0.1.0 =
-* Release
+* Initial release
+* Hide blocks on mobile devices (max-width: 768px)
+* Hide blocks on desktop devices (min-width: 769px)
+* Visual indicators in the editor
+* Works with all Gutenberg blocks
+* i18n ready for translations
 
-== Arbitrary section ==
+== Upgrade Notice ==
 
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+= 0.1.0 =
+Initial release of Hide Block On Mobile plugin.

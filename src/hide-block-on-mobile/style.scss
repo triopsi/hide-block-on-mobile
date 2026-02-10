@@ -2,3 +2,8 @@
 @media (max-width: 768px) {
   .hide-mobile { display: none !important; }
 }
+
+/* hide elements on desktop */
+@media (min-width: 769px) {
+  .hide-desktop { display: none !important; }
+}
