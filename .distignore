@@ -9,6 +9,8 @@ node_modules
 .editorconfig
 .DS_Store
 Thumbs.db
+.env
+.devcontainer
 
 # Source files (only include compiled build)
 src
