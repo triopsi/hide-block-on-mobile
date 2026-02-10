@@ -25,15 +25,27 @@ This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsi
 
 ## Installation
 
-### Manual Installation
+### For End Users (Recommended)
 
-1. Download the plugin files or clone this repository
-2. Upload the `hide-block-on-mobile` folder to `/wp-content/plugins/`
-3. Run `npm install` in the plugin directory
+**No build process required!** Download the ready-to-use plugin:
+
+1. Go to the [Releases](../../releases) page
+2. Download the latest `hide-block-on-mobile.zip` file
+3. In WordPress admin, go to Plugins → Add New → Upload Plugin
+4. Choose the downloaded ZIP file and click "Install Now"
+5. Activate the plugin
+6. Done! The "Responsive" panel will now appear in every block's settings
+
+### For Developers (Manual Build)
+
+If you want to modify the plugin or build from source:
+
+1. Clone this repository or download the source code
+2. Navigate to the plugin directory
+3. Run `npm install` to install dependencies
 4. Run `npm run build` to compile the assets
-5. Activate the plugin through the 'Plugins' menu in WordPress
-6. Edit any post or page with the block editor
-7. Select a block and look for the "Responsive" panel in the right sidebar
+5. Upload the `hide-block-on-mobile` folder to `/wp-content/plugins/`
+6. Activate the plugin through the 'Plugins' menu in WordPress
 
 ## Usage
 

@@ -8,9 +8,9 @@ import { registerSaveFilters } from './save';
 /**
  * Attribut an (fast) alle Blöcke hängen
  */
-function addHideOnMobileAttribute(settings, name) {
-	const excluded = new Set(['core/block']); // z.B. Reusable Block Wrapper
-	if (excluded.has(name)) return settings;
+function addHideOnMobileAttribute( settings, name ) {
+	const excluded = new Set( [ 'core/block' ] ); // z.B. Reusable Block Wrapper
+	if ( excluded.has( name ) ) return settings;
 
 	return {
 		...settings,
