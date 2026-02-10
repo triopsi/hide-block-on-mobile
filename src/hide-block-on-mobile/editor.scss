@@ -1,0 +1,25 @@
+/* hide elements on mobile (editor preview: only mark, do NOT hide) */
+.hide-mobile {
+  opacity: 0.45;
+  outline: 2px dashed currentColor;
+  outline-offset: 4px;
+
+  position: relative;
+}
+
+/* optional: kleine Ecke/Badge über CSS-Pseudo-Element */
+.hide-mobile::before {
+  content: "Hidden on mobile";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 11px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+}
+

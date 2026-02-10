@@ -1,0 +1,1 @@
+.hide-mobile{opacity:.45;outline:2px dashed currentColor;outline-offset:4px;position:relative}.hide-mobile:before{background:rgba(0,0,0,.75);border-radius:4px;color:#fff;content:"Hidden on mobile";font-size:11px;left:6px;line-height:1;padding:4px 6px;pointer-events:none;position:absolute;top:6px;z-index:2}
