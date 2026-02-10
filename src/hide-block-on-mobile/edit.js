@@ -69,8 +69,12 @@ export const withHideMobileClassInEditor = createHigherOrderComponent(
 		}
 
 		const classes = [ props.className ];
-		if ( hideOnMobile ) classes.push( 'hide-mobile' );
-		if ( hideOnDesktop ) classes.push( 'hide-desktop' );
+		if ( hideOnMobile ) {
+			classes.push( 'hide-mobile' );
+		}
+		if ( hideOnDesktop ) {
+			classes.push( 'hide-desktop' );
+		}
 
 		const className = classes.filter( Boolean ).join( ' ' );
 

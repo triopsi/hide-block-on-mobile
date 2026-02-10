@@ -1,61 +1,61 @@
 /* hide elements on mobile (editor preview: only mark, do NOT hide) */
 .hide-mobile {
-  opacity: 0.45;
-  outline: 2px dashed currentColor;
-  outline-offset: 4px;
+	opacity: 0.45;
+	outline: 2px dashed currentcolor;
+	outline-offset: 4px;
 
-  position: relative;
+	position: relative;
 }
 
 /* optional: kleine Ecke/Badge über CSS-Pseudo-Element */
 .hide-mobile::before {
-  content: "Hidden on mobile";
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  font-size: 11px;
-  line-height: 1;
-  padding: 4px 6px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  z-index: 2;
-  pointer-events: none;
+	content: "Hidden on mobile";
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	font-size: 11px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	z-index: 2;
+	pointer-events: none;
 }
 
 /* hide elements on desktop (editor preview: only mark, do NOT hide) */
 .hide-desktop {
-  opacity: 0.45;
-  outline: 2px dashed #1e90ff;
-  outline-offset: 4px;
+	opacity: 0.45;
+	outline: 2px dashed #1e90ff;
+	outline-offset: 4px;
 
-  position: relative;
+	position: relative;
 }
 
 .hide-desktop::before {
-  content: "Hidden on desktop";
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  font-size: 11px;
-  line-height: 1;
-  padding: 4px 6px;
-  border-radius: 4px;
-  background: rgba(30, 144, 255, 0.85);
-  color: #fff;
-  z-index: 2;
-  pointer-events: none;
+	content: "Hidden on desktop";
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-size: 11px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 4px;
+	background: rgba(30, 144, 255, 0.85);
+	color: #fff;
+	z-index: 2;
+	pointer-events: none;
 }
 
 /* When both are active */
 .hide-mobile.hide-desktop {
-  outline: 2px dashed #9370db;
+	outline: 2px dashed #9370db;
 }
 
 .hide-mobile.hide-desktop::before {
-  content: "Hidden on mobile & desktop";
-  background: rgba(147, 112, 219, 0.85);
-  left: 50%;
-  transform: translateX(-50%);
+	content: "Hidden on mobile & desktop";
+	background: rgba(147, 112, 219, 0.85);
+	left: 50%;
+	transform: translateX(-50%);
 }
 

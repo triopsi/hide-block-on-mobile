@@ -2,11 +2,18 @@ import { addFilter } from '@wordpress/hooks';
 
 /**
  * Beim Speichern `hide-mobile` und `hide-desktop` zur className hinzufügen (Frontend-Markup)
+ *
+ * @param {Object} extraProps Props already collected for save content.
+ * @param {Object} blockType  Block type object.
+ * @param {Object} attributes Block attributes.
+ * @return {Object} Modified props including classes.
  */
 export function addHideMobileClassOnSave( extraProps, blockType, attributes ) {
 	const { hideOnMobile, hideOnDesktop } = attributes || {};
 
-	if ( ! hideOnMobile && ! hideOnDesktop ) return extraProps;
+	if ( ! hideOnMobile && ! hideOnDesktop ) {
+		return extraProps;
+	}
 
 	const classes = ( extraProps.className || '' )
 		.split( ' ' )
