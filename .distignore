@@ -40,3 +40,8 @@ vendor
 composer.phar
 composer-setup.php
 .composer
+
+.phpcs.xml.dist
+.vscode
+release
+utils
