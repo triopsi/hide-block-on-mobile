@@ -1,12 +1,12 @@
 
 
+<p align="center">
+  <img src="assets/banner-772x250.png" alt="Gutenberg Editor Screenshot">
+</p>
+
 # Hide Block On Mobile
 
 A WordPress plugin that adds responsive visibility controls to the block inspector, allowing you to hide any Gutenberg block on mobile or desktop devices.
-
-<p align="center">
-  <img src="gutenberg-editor-settings-block.png" alt="Gutenberg Editor Screenshot">
-</p>
 
 ## Description
 
@@ -14,6 +14,7 @@ This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsi
 
 - **Hide on mobile**: Adds the `hide-mobile` CSS class - hides blocks on screens smaller than 768px
 - **Hide on desktop**: Adds the `hide-desktop` CSS class - hides blocks on screens larger than 768px
+- **Center on mobile**: Adds the `center-mobile` CSS class - centers block content on screens smaller than 768px
 
 **Features:**
 - Works with all Gutenberg blocks (core and third-party)
@@ -53,13 +54,15 @@ If you want to modify the plugin or build from source:
 2. Select any block you want to control
 3. In the right sidebar, find the "Responsive" panel
 4. Toggle "Hide on mobile" to hide the block on mobile devices (max-width: 768px)
-5. Toggle "Hide on desktop" to hide the block on desktop devices (min-width: 769px)
-6. You can enable both options if you want to hide the block everywhere (useful for draft content)
+5. Toggle "Center on mobile" to center the block's content on mobile devices (max-width: 768px)
+6. Toggle "Hide on desktop" to hide the block on desktop devices (min-width: 769px)
+7. You can enable both hide options if you want to hide the block everywhere (useful for draft content)
 
 **Editor Visual Indicators:**
 - Blocks with "Hide on mobile" show a black dashed outline with a label
 - Blocks with "Hide on desktop" show a blue dashed outline with a label
 - Blocks with both options show a purple dashed outline with a combined label
+- Blocks with "Center on mobile" show a green dashed outline with a label and appear centered in the editor mobile preview
 
 ## Development
 
@@ -103,5 +106,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 - PHP 7.4 or higher
 - Node.js and npm (for development)
 
-## Screenshot
-<img src="screenshot-1.png" alt="Gutenberg Editor Screenshot 2">
+## Screenshots
+<img src="assets/screenshot-1-settings.png" alt="Gutenberg Editor Screenshot 1 - Settings">
+
+
+<img src="assets/screenshot-2-full.png" alt="Full Page Editor">

@@ -24,6 +24,7 @@ function addHideOnMobileAttribute( settings, name ) {
 			...settings.attributes,
 			hideOnMobile: { type: 'boolean', default: false },
 			hideOnDesktop: { type: 'boolean', default: false },
+			centerOnMobile: { type: 'boolean', default: false },
 		},
 	};
 }

@@ -11,6 +11,7 @@ node_modules
 Thumbs.db
 .env
 .devcontainer
+*.bak
 
 # Source files (only include compiled build)
 src
@@ -33,3 +34,9 @@ screenshot-1.png
 # Testing
 tests
 bin
+
+# Composer
+vendor
+composer.phar
+composer-setup.php
+.composer

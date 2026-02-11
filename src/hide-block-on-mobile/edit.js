@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
 export const withHideOnMobileToggle = createHigherOrderComponent(
 	( BlockEdit ) => ( props ) => {
 		const { attributes, setAttributes } = props;
-		const { hideOnMobile, hideOnDesktop } = attributes;
+		const { hideOnMobile, hideOnDesktop, centerOnMobile } = attributes;
 
 		return (
 			<Fragment>
@@ -49,6 +49,20 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 								'hide-block-on-mobile'
 							) }
 						/>
+						<ToggleControl
+							label={ __(
+								'Center on mobile',
+								'hide-block-on-mobile'
+							) }
+							checked={ !! centerOnMobile }
+							onChange={ ( value ) =>
+								setAttributes( { centerOnMobile: !! value } )
+							}
+							help={ __(
+								'Centers this block on mobile devices (max-width: 768px).',
+								'hide-block-on-mobile'
+							) }
+						/>
 					</PanelBody>
 				</InspectorControls>
 			</Fragment>
@@ -62,9 +76,10 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
  */
 export const withHideMobileClassInEditor = createHigherOrderComponent(
 	( BlockListBlock ) => ( props ) => {
-		const { hideOnMobile, hideOnDesktop } = props?.attributes || {};
+		const { hideOnMobile, hideOnDesktop, centerOnMobile } =
+			props?.attributes || {};
 
-		if ( ! hideOnMobile && ! hideOnDesktop ) {
+		if ( ! hideOnMobile && ! hideOnDesktop && ! centerOnMobile ) {
 			return <BlockListBlock { ...props } />;
 		}
 
@@ -74,6 +89,9 @@ export const withHideMobileClassInEditor = createHigherOrderComponent(
 		}
 		if ( hideOnDesktop ) {
 			classes.push( 'hide-desktop' );
+		}
+		if ( centerOnMobile ) {
+			classes.push( 'center-mobile' );
 		}
 
 		const className = classes.filter( Boolean ).join( ' ' );
