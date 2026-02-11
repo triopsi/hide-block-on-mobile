@@ -1,5 +1,7 @@
 /* hide elements on mobile (editor preview: only mark, do NOT hide) */
-.hide-mobile {
+.editor-styles-wrapper .hide-mobile,
+.edit-post-visual-editor__post-area .hide-mobile,
+.wp-block .hide-mobile {
 	opacity: 0.45;
 	outline: 2px dashed currentcolor;
 	outline-offset: 4px;
@@ -8,7 +10,9 @@
 }
 
 /* optional: kleine Ecke/Badge über CSS-Pseudo-Element */
-.hide-mobile::before {
+.editor-styles-wrapper .hide-mobile::before,
+.edit-post-visual-editor__post-area .hide-mobile::before,
+.wp-block .hide-mobile::before {
 	content: "Hidden on mobile";
 	position: absolute;
 	top: 6px;
@@ -23,8 +27,9 @@
 	pointer-events: none;
 }
 
-/* hide elements on desktop (editor preview: only mark, do NOT hide) */
-.hide-desktop {
+.editor-styles-wrapper .hide-desktop,
+.edit-post-visual-editor__post-area .hide-desktop,
+.wp-block .hide-desktop {
 	opacity: 0.45;
 	outline: 2px dashed #1e90ff;
 	outline-offset: 4px;
@@ -32,7 +37,9 @@
 	position: relative;
 }
 
-.hide-desktop::before {
+.editor-styles-wrapper .hide-desktop::before,
+.edit-post-visual-editor__post-area .hide-desktop::before,
+.wp-block .hide-desktop::before {
 	content: "Hidden on desktop";
 	position: absolute;
 	top: 6px;
@@ -48,26 +55,35 @@
 }
 
 /* When both are active */
-.hide-mobile.hide-desktop {
+.editor-styles-wrapper .hide-mobile.hide-desktop,
+.edit-post-visual-editor__post-area .hide-mobile.hide-desktop,
+.wp-block .hide-mobile.hide-desktop {
 	outline: 2px dashed #9370db;
 }
 
-.hide-mobile.hide-desktop::before {
+.editor-styles-wrapper .hide-mobile.hide-desktop::before,
+.edit-post-visual-editor__post-area .hide-mobile.hide-desktop::before,
+.wp-block .hide-mobile.hide-desktop::before {
 	content: "Hidden on mobile & desktop";
 	background: rgba(147, 112, 219, 0.85);
 	left: 50%;
 	transform: translateX(-50%);
 }
 
+
 /* center on mobile (editor preview marker) */
-.center-mobile {
+.editor-styles-wrapper .center-mobile,
+.edit-post-visual-editor__post-area .center-mobile,
+.wp-block .center-mobile {
 	opacity: 0.9;
 	outline: 2px dashed #32cd32;
 	outline-offset: 4px;
 	position: relative;
 }
 
-.center-mobile::before {
+.editor-styles-wrapper .center-mobile::before,
+.edit-post-visual-editor__post-area .center-mobile::before,
+.wp-block .center-mobile::before {
 	content: "Centered on mobile";
 	position: absolute;
 	top: 6px;

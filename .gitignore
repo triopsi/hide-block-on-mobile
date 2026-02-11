@@ -34,4 +34,17 @@ node_modules/
 
 # Backup files
 *.bak
-*.backup
+
+# macOS metadata files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Windows thumbnail and metadata files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

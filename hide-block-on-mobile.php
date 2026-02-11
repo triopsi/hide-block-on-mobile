@@ -48,7 +48,7 @@ function hbom_enqueue_editor_styles() {
 		wp_enqueue_style(
 			'hide-block-on-mobile-editor',
 			$url,
-			array(),
+			array( 'wp-edit-blocks' ),
 			filemtime( $path )
 		);
 	}
