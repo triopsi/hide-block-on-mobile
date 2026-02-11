@@ -1,11 +1,11 @@
 === Hide Block On Mobile ===
-Contributors:      The WordPress Contributors
+Contributors:      triopsi
 Tags:              block, gutenberg, responsive, mobile, hide, visibility
 Requires at least: 6.8
 Tested up to:      6.8
 Requires PHP:      7.4
 Stable tag:        1.1.0
-License:           GPL-2.0-or-later
+License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 Control block visibility on mobile and desktop devices with simple toggle controls in the Gutenberg editor.
@@ -98,25 +98,23 @@ No, this plugin doesn't create any new blocks. It adds functionality to existing
 * i18n ready for translations
 
 = 1.1.0 =
+* Added option to register a plugin-wide toggle for enabling/disabling the responsive controls.
+* Accessibility improvements for toggle controls in the block inspector.
+* Fixed editor outline color regression and label overlap in tight editor layouts.
+* Reduced CSS specificity to play nicer with theme styles.
 * Added "Center on Mobile" option to center blocks on screens smaller than 768px.
 * Improved editor visual indicators and labels for better clarity.
 * Fixed duplicate CSS class issue when toggling visibility repeatedly.
 * Improved sanitization and escaping for saved block attributes.
 * Compatibility fixes for PHP 8.0+ and WordPress 6.8.
 * Minor performance and CSS optimizations.
-
-= 1.0.0 =
-* Stable release.
 * Polished inspector UI and accessibility (ARIA labels).
 * Persist block visibility classes server-side to ensure frontend/backward compatibility.
 * Ensured compatibility with a wide range of third-party blocks.
 * Added translations scaffolding and updated textdomain usage.
 
-= 1.1.0 =
-* Added option to register a plugin-wide toggle for enabling/disabling the responsive controls.
-* Accessibility improvements for toggle controls in the block inspector.
-* Fixed editor outline color regression and label overlap in tight editor layouts.
-* Reduced CSS specificity to play nicer with theme styles.
+= 1.1.1 =
+* Update Readme. Ready for WordPress Plugin review
 
 == Upgrade Notice ==
 
