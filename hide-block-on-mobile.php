@@ -77,7 +77,7 @@ function hbom_enqueue_editor_script() {
 	);
 
 	// Set script translations for localization
-	// To add translations: create languages/hide-block-on-mobile-de_DE.po/mo files
+	// To add translations: create languages/hide-block-on-mobile-de_DE.po/mo files.
 	wp_set_script_translations(
 		'hide-block-on-mobile-editor-script',
 		'hide-block-on-mobile',
