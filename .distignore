@@ -34,3 +34,9 @@ screenshot-1.png
 # Testing
 tests
 bin
+
+# Composer
+vendor
+composer.phar
+composer-setup.php
+.composer

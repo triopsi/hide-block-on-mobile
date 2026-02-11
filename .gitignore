@@ -49,3 +49,9 @@ Icon?
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Composer
+/vendor/
+/composer.phar
+/composer-setup.php
+/.composer/

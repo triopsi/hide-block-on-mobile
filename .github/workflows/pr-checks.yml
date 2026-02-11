@@ -1,5 +1,4 @@
 name: PR Quality Checks
-
 on:
     pull_request:
         branches:
@@ -7,6 +6,8 @@ on:
     push:
         branches:
             - main
+    # Allow manually triggering the workflow.
+    workflow_dispatch:
 
 jobs:
     lint-and-build:
