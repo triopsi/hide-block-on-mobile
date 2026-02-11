@@ -45,3 +45,6 @@ composer-setup.php
 .vscode
 release
 utils
+
+# Docs
+docs
