@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Hide Block On Mobile
- * Description:       Adds a toggle in the block inspector to hide blocks on mobile via `hide-mobile` class.
- * Version: 2.0.1
+ * Description:       Adds a toggle in the block inspector to hide blocks on mobile via `hide-mobile` class. 
+ * Version:           1.1.0
  * Requires at least: 6.8
  * Requires PHP:      7.4
  * Author:            triopsi
@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       hide-block-on-mobile
  *
- * @package CreateBlock
+ * @package HideBlockOnMobile
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

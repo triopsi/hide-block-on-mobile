@@ -4,7 +4,7 @@ Tags:              block, gutenberg, responsive, mobile, hide, visibility
 Requires at least: 6.8
 Tested up to:      6.8
 Requires PHP:      7.4
-Stable tag:        0.1.0
+Stable tag:        1.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,11 +51,6 @@ Both options can be used simultaneously if needed (useful for draft content or A
 3. Look for the "Responsive" panel in the right sidebar (Block settings)
 4. Toggle "Hide on mobile" or "Hide on desktop" as needed
 
-
-
-= 1.0.4 =
-* Added "Center on Mobile" toggle to center block content on mobile devices (adds `center-mobile` CSS class)
-* Editor preview shows marker for centered blocks
 == Frequently Asked Questions ==
 
 = Does this work with all blocks? =
