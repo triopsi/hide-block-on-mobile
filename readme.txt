@@ -116,6 +116,9 @@ No, this plugin doesn't create any new blocks. It adds functionality to existing
 = 1.1.1 =
 * Update Readme. Ready for WordPress Plugin review
 
+= 1.1.2 =
+* Fix delete unlesed files
+
 == Upgrade Notice ==
 
 = 0.1.0 =

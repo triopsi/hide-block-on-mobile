@@ -55,3 +55,6 @@ Desktop.ini
 /composer.phar
 /composer-setup.php
 /.composer/
+
+# Reposrts
+phpcs-report.xml
