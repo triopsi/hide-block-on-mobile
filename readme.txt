@@ -1,10 +1,10 @@
 === Hide Block On Mobile ===
 Contributors:      triopsi
 Tags:              block, gutenberg, responsive, mobile, hide, visibility
-Requires at least: 6.8
-Tested up to:      6.8
+Requires at least: 6.9
+Tested up to:      6.9
 Requires PHP:      7.4
-Stable tag:        1.1.0
+Stable tag:        1.1.2
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
