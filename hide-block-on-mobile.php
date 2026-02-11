@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Hide Block On Mobile
  * Description:       Adds a toggle to the block inspector allowing you to hide individual blocks on mobile devices by applying a `hide-mobile` CSS class.
- * Version: 1.1.2
- * Requires at least: 6.8
+ * Version: 1.1.3
+ * Requires at least: 6.9
  * Requires PHP:      7.4
  * Author:            triopsi
  * Author URI:        https://triopsi.dev

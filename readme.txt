@@ -1,10 +1,10 @@
 === Hide Block On Mobile ===
 Contributors:      triopsi
-Tags:              block, gutenberg, responsive, mobile, hide, visibility
-Requires at least: 6.8
-Tested up to:      6.8
+Tags:              block, gutenberg, responsive, mobile, hide
+Requires at least: 6.9
+Tested up to:      6.9
 Requires PHP:      7.4
-Stable tag:        1.1.0
+Stable tag:        1.1.3
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,9 @@ No, this plugin doesn't create any new blocks. It adds functionality to existing
 
 = 1.1.2 =
 * Fix delete unlesed files
+
+= 1.1.3 =
+* Fix via plugin checker
 
 == Upgrade Notice ==
 
