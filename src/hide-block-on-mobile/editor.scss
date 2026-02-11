@@ -59,3 +59,27 @@
 	transform: translateX(-50%);
 }
 
+/* center on mobile (editor preview marker) */
+.center-mobile {
+	opacity: 0.9;
+	outline: 2px dashed #32cd32;
+	outline-offset: 4px;
+	position: relative;
+}
+
+.center-mobile::before {
+	content: "Centered on mobile";
+	position: absolute;
+	top: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 11px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 4px;
+	background: rgba(50, 205, 50, 0.85);
+	color: #fff;
+	z-index: 2;
+	pointer-events: none;
+}
+

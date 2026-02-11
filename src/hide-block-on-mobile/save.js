@@ -9,9 +9,9 @@ import { addFilter } from '@wordpress/hooks';
  * @return {Object} Modified props including classes.
  */
 export function addHideMobileClassOnSave( extraProps, blockType, attributes ) {
-	const { hideOnMobile, hideOnDesktop } = attributes || {};
+	const { hideOnMobile, hideOnDesktop, centerOnMobile } = attributes || {};
 
-	if ( ! hideOnMobile && ! hideOnDesktop ) {
+	if ( ! hideOnMobile && ! hideOnDesktop && ! centerOnMobile ) {
 		return extraProps;
 	}
 
@@ -25,6 +25,10 @@ export function addHideMobileClassOnSave( extraProps, blockType, attributes ) {
 
 	if ( hideOnDesktop && ! classes.includes( 'hide-desktop' ) ) {
 		classes.push( 'hide-desktop' );
+	}
+
+	if ( centerOnMobile && ! classes.includes( 'center-mobile' ) ) {
+		classes.push( 'center-mobile' );
 	}
 
 	return { ...extraProps, className: classes.join( ' ' ) };

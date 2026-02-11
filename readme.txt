@@ -36,6 +36,7 @@ Both options can be used simultaneously if needed (useful for draft content or A
 2. Navigate to Plugins > Add New
 3. Search for "Hide Block On Mobile"
 4. Click "Install Now" and then "Activate"
+* **Center on Mobile** - Center blocks on screens smaller than 768px
 
 = Manual Installation =
 
@@ -51,6 +52,10 @@ Both options can be used simultaneously if needed (useful for draft content or A
 4. Toggle "Hide on mobile" or "Hide on desktop" as needed
 
 
+
+= 1.0.4 =
+* Added "Center on Mobile" toggle to center block content on mobile devices (adds `center-mobile` CSS class)
+* Editor preview shows marker for centered blocks
 == Frequently Asked Questions ==
 
 = Does this work with all blocks? =
