@@ -62,10 +62,7 @@ If you want to modify the plugin or build from source:
 - Blocks with "Hide on mobile" show a black dashed outline with a label
 - Blocks with "Hide on desktop" show a blue dashed outline with a label
 - Blocks with both options show a purple dashed outline with a combined label
- - Blocks with "Center on mobile" show a green dashed outline with a label and appear centered in the editor mobile preview
- - Blocks with "Hide on mobile" show a black dashed outline with a label
- - Blocks with "Hide on desktop" show a blue dashed outline with a label
- - Blocks with both options show a purple dashed outline with a combined label
+- Blocks with "Center on mobile" show a green dashed outline with a label and appear centered in the editor mobile preview
 
 ## Development
 
