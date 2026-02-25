@@ -17,7 +17,7 @@
 
 	<!-- WP + PHP versions -->
 	<config name="minimum_supported_wp_version" value="5.6"/>
-	<config name="testVersion" value="7.4-"/>
+	<config name="testVersion" value="8.0-"/>
 
 	<!-- Rules -->
 	<rule ref="WordPress">
@@ -29,7 +29,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="extra-product-data-for-woocommerce"/>
+				<element value="triopsi-block-visibility"/>
 			</property>
 		</properties>
 	</rule>

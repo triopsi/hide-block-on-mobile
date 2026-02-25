@@ -1,10 +1,10 @@
 
 
 <p align="center">
-  <img src="assets/banner-772x250.png" alt="Gutenberg Editor Screenshot">
+  <img src=".wordpress-org/banner-772x250.png" alt="Gutenberg Editor Screenshot">
 </p>
 
-# Hide Block On Mobile
+# Triopsi Block Visibility
 
 A WordPress plugin that adds responsive visibility controls to the block inspector, allowing you to hide any Gutenberg block on mobile or desktop devices.
 
@@ -103,11 +103,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 ## Requirements
 
 - WordPress 6.8 or higher
-- PHP 7.4 or higher
+- PHP 8.0 or higher
 - Node.js and npm (for development)
 
 ## Screenshots
-<img src="assets/screenshot-1-settings.png" alt="Gutenberg Editor Screenshot 1 - Settings">
+<img src=".wordpress-org/screenshot-1-settings.png" alt="Gutenberg Editor Screenshot 1 - Settings">
 
 
-<img src="assets/screenshot-2-full.png" alt="Full Page Editor">
+<img src=".wordpress-org/screenshot-2-full.png" alt="Full Page Editor">
