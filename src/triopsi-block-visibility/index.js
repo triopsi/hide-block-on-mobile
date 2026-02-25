@@ -1,6 +1,4 @@
 import { addFilter } from '@wordpress/hooks';
-import './style.scss';
-import './editor.scss';
 
 import { registerEditorFilters } from './edit';
 import { registerSaveFilters } from './save';
