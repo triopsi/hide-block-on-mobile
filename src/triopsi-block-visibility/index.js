@@ -1,7 +1,7 @@
 import { addFilter } from '@wordpress/hooks';
 
-import { registerEditorFilters } from './edit';
-import { registerSaveFilters } from './save';
+import { registerEditorFilters } from './edit.jsx';
+import { registerSaveFilters } from './save.jsx';
 
 /**
  * Attribut an (fast) alle Blöcke hängen
