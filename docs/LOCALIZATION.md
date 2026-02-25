@@ -4,7 +4,7 @@
 The plugin is now in English by default and ready for translation.
 
 ## Text Domain
-The plugin uses the text domain: `hide-block-on-mobile`
+The plugin uses the text domain: `triopsi-block-visibility`
 
 ## Translatable Strings
 All user-facing strings use WordPress i18n functions:
@@ -23,20 +23,20 @@ mkdir -p languages
 Use WP-CLI or a tool like Poedit to generate the translation template:
 
 ```bash
-wp i18n make-pot . languages/hide-block-on-mobile.pot --domain=hide-block-on-mobile
+wp i18n make-pot . languages/triopsi-block-visibility.pot --domain=triopsi-block-visibility
 ```
 
 Or use the npm package:
 ```bash
 npm install --save-dev @wordpress/i18n
-npx wp-i18n make-pot . languages/hide-block-on-mobile.pot --domain=hide-block-on-mobile
+npx wp-i18n make-pot . languages/triopsi-block-visibility.pot --domain=triopsi-block-visibility
 ```
 
 ### 3. Create language-specific .po files
 For German (de_DE):
 ```bash
 # Copy the .pot file
-cp languages/hide-block-on-mobile.pot languages/hide-block-on-mobile-de_DE.po
+cp languages/triopsi-block-visibility.pot languages/triopsi-block-visibility-de_DE.po
 
 # Edit with Poedit or text editor
 # Add translations for each msgid
@@ -44,7 +44,7 @@ cp languages/hide-block-on-mobile.pot languages/hide-block-on-mobile-de_DE.po
 
 ### 4. Generate .mo files
 ```bash
-msgfmt languages/hide-block-on-mobile-de_DE.po -o languages/hide-block-on-mobile-de_DE.mo
+msgfmt languages/triopsi-block-visibility-de_DE.po -o languages/triopsi-block-visibility-de_DE.mo
 ```
 
 ### 5. For JavaScript translations
@@ -56,7 +56,7 @@ WordPress will automatically generate `.json` files for JavaScript translations.
 
 ## Example German Translation
 
-Create `languages/hide-block-on-mobile-de_DE.po`:
+Create `languages/triopsi-block-visibility-de_DE.po`:
 ```
 msgid "Responsive"
 msgstr "Responsiv"

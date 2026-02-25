@@ -1,52 +1,70 @@
 # Exclude development and build files from distribution
-.git
-.github
+
+# Repo metadata and tooling
+.git/
+.github/
 .gitignore
 .distignore
-node_modules
-.npm
-.eslintrc.js
+.buildignore
+
+# Editor and OS files
 .editorconfig
+.vscode/
 .DS_Store
 Thumbs.db
+
+# Environment and local config
 .env
-.devcontainer
-*.bak
+.devcontainer/
+.wp-env.json
+.npm/
+.husky/
 
-# Source files (only include compiled build)
-src
+# Build and dev tooling
+commitlint.config.mjs
+debug.log
+mix-manifest.json
+tsconfig.json
+vite.config.js
+webpack.config.js
 
-# Development files
+# Node/NPM
+node_modules/
 package.json
 package-lock.json
-composer.json
-composer.lock
-phpcs.xml.dist
-phpunit.xml.dist
-webpack.config.js
-tsconfig.json
 
-# Documentation
-LOCALIZATION.md
-gutenber-editor-screenshot.png
-screenshot-1.png
-
-# Testing
-tests
-bin
-
-# Composer
-vendor
+# PHP Composer
 composer.phar
 composer-setup.php
-.composer
+composer.json
+composer.lock
 
-.phpcs.xml.dist
-.vscode
-release
-utils
+# Tests and fixtures
+tests/
+bin/
+playwright.config.ts
+phpunit.xml
+phpunit.xml.dist
+phpcs.xml
+phpcs.xml.dist
+sample_products.csv
+utils/
 
-# Docs
-docs
-
+# Reports and artifacts
+playwright-report/
+reports/
+test-results/
+/coverage-html
+coverage.xml
+.phpunit.result.cache
+/tests/_output
 phpcs-report.xml
+
+# Docs and distribution
+docs/
+README.md
+release/
+/.wordpress-org/
+
+# Backups
+*.bak

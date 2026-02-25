@@ -4,7 +4,7 @@ Tags:              block, gutenberg, responsive, mobile, hide
 Requires at least: 6.9
 Tested up to:      6.9
 Requires PHP:      7.4
-Stable tag:        1.1.3
+Stable tag:        2.0.0
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ Both options can be used simultaneously if needed (useful for draft content or A
 = Manual Installation =
 
 1. Download the plugin files
-2. Upload the `hide-block-on-mobile` folder to the `/wp-content/plugins/` directory
+2. Upload the `triopsi-block-visibility` folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' screen in WordPress
 
 = After Activation =
@@ -121,6 +121,9 @@ No, this plugin doesn't create any new blocks. It adds functionality to existing
 
 = 1.1.3 =
 * Fix via plugin checker
+
+= 2.0.0 =
+* Change name and slug
 
 == Upgrade Notice ==
 

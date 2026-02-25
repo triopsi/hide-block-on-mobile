@@ -4,7 +4,7 @@
     {
       "label": "Bump Version: patch",
       "type": "shell",
-      "command": "./utils/scripts/bump-version.sh",
+      "command": "./bin/bump-version.sh",
       "args": ["patch"],
       "presentation": {
         "echo": true,
@@ -17,7 +17,7 @@
     {
       "label": "Bump Version: minor",
       "type": "shell",
-      "command": "./utils/scripts/bump-version.sh",
+      "command": "./bin/bump-version.sh",
       "args": ["minor"],
       "presentation": {
         "echo": true,
@@ -30,7 +30,7 @@
     {
       "label": "Bump Version: major",
       "type": "shell",
-      "command": "./utils/scripts/bump-version.sh",
+      "command": "./bin/bump-version.sh",
       "args": ["major"],
       "presentation": {
         "echo": true,
@@ -43,7 +43,7 @@
     {
       "label": "Bump Version: custom",
       "type": "shell",
-      "command": "./utils/scripts/bump-version.sh",
+      "command": "./bin/bump-version.sh",
       "args": ["${input:customVersion}"],
       "presentation": {
         "echo": true,

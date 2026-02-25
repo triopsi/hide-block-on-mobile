@@ -9,11 +9,13 @@ set -euo pipefail
 #   bump-version.sh 1.2.3
 #
 # Updates the `version` field in package.json and the plugin header Version in
-# hide-block-on-mobile.php. Prints the new version.
+# triopsi-block-visibility.php. Prints the new version.
 
-ROOT_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 PACKAGE_JSON="$ROOT_DIR/package.json"
-PLUGIN_PHP="$ROOT_DIR/hide-block-on-mobile.php"
+PLUGIN_PHP="$ROOT_DIR/triopsi-block-visibility.php"
+COMPOSER_JSON="$ROOT_DIR/composer.json"
+CONSTANTS_PHP="$ROOT_DIR/src/constants.php"
 
 if [ "$#" -ne 1 ]; then
   echo "Usage: $0 {patch|minor|major|<version>}"
@@ -81,7 +83,18 @@ else
   sed -E -i.bak "s/(\"version\"[[:space:]]*:[[:space:]]*)\"[0-9]+\.[0-9]+\.[0-9]+\"/\1\"$new_version\"/" "$PACKAGE_JSON"
 fi
 
-# update hide-block-on-mobile.php plugin header 'Version:' line
+# update composer.json if present
+# if [ -f "$COMPOSER_JSON" ]; then
+#   if command -v jq >/dev/null 2>&1; then
+#     tmpfile_comp=$(mktemp)
+#     jq --arg v "$new_version" '.version=$v' "$COMPOSER_JSON" > "$tmpfile_comp"
+#     mv "$tmpfile_comp" "$COMPOSER_JSON"
+#   else
+#     sed -E -i.bak "s/(\"version\"[[:space:]]*:[[:space:]]*)\"[0-9]+\.[0-9]+\.[0-9]+\"/\1\"$new_version\"/" "$COMPOSER_JSON"
+#   fi
+# fi
+
+# update triopsi-block-visibility.php plugin header 'Version:' line
 if [ -f "$PLUGIN_PHP" ]; then
   # Replace the Version: line within the plugin header block. Handles lines like
   # " * Version:    1.0.4" by allowing an optional leading '*' and whitespace.
@@ -100,6 +113,49 @@ if [ -f "$PLUGIN_PHP" ]; then
     }
   ' "$PLUGIN_PHP" > "$tmpfile"
   mv "$tmpfile" "$PLUGIN_PHP"
+fi
+
+# update src/constants.php $version variable if present
+# if [ -f "$CONSTANTS_PHP" ]; then
+#   sed -E -i.bak "s/(\\\$version = ')[0-9]+\.[0-9]+\.[0-9]+'/\1$new_version'/" "$CONSTANTS_PHP"
+# fi
+
+# update readme.txt stable tag if present
+README="$ROOT_DIR/readme.txt"
+if [ -f "$README" ]; then
+  # Replace the Stable tag line with the new version
+  sed -E -i.bak "s/^(Stable tag:[[:space:]]*).*/\1$new_version/" "$README"
+  
+  # Add new changelog entry with current date (DD.MM.YYYY format)
+  current_date=$(date '+%d.%m.%Y')
+  changelog_entry="= $new_version ($current_date) ="
+  
+  # Check if changelog entry already exists
+  if ! grep -q "^= $new_version" "$README"; then
+    # Find the line number after "== Changelog ==" and insert new entry
+    # Insert after the first existing version entry (after the Changelog header)
+    awk -v entry="$changelog_entry" '
+      /^== Changelog ==/ { 
+        print $0
+        # Print empty line
+        print ""
+        # Print new version entry
+        print entry
+        # Add placeholder for changes
+        print "* Changes will be documented here"
+        in_changelog=1
+        next
+      }
+      { print }
+    ' "$README" > "$README.tmp" && mv "$README.tmp" "$README"
+  fi
+fi
+
+# update README.md stable tag if present
+README_MD="$ROOT_DIR/README.md"
+if [ -f "$README_MD" ]; then
+  # Replace the Stable tag line in the markdown table with the new version
+  sed -E -i.bak "s/^(\| Stable tag \|[[:space:]]*).*/\1$new_version |/" "$README_MD"
 fi
 
 echo "Bumped version: $current_version -> $new_version"

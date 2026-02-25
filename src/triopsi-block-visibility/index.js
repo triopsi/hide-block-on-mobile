@@ -31,7 +31,7 @@ function addHideOnMobileAttribute( settings, name ) {
 
 addFilter(
 	'blocks.registerBlockType',
-	'hbom/add-hide-on-mobile-attribute',
+	'trblvi/add-triopsi-block-visibility-attribute',
 	addHideOnMobileAttribute
 );
 

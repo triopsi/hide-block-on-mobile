@@ -1,11 +1,11 @@
 {
-   "phpcs.standard": "WordPress", 
-   "phpcs.executablePath": "./vendor/bin/phpcs",
-   "phpcbf.executablePath": "./vendor/bin/phpcbf",
-   "phpcbf.debug": false,
-   "phpcbf.standard": "WordPress",
-   "php-docblocker.author": {
-      "name": "Triopsi",
-      "email": "info@triopsi.com"
-   }
+  "intelephense.environment.includePaths": [
+    "/var/www/",
+  ],
+  "phpsab.standard": null,
+  "phpsab.snifferEnable": true,
+  "phpsab.executablePathCS": "./vendor/bin/phpcs",
+  "phpsab.executablePathCBF": "./vendor/bin/phpcbf",
+  "phpsab.snifferShowSources": true,
+  "phpsab.debug": false,
 }

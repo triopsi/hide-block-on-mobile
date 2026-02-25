@@ -9,7 +9,6 @@
 	position: relative;
 }
 
-/* optional: kleine Ecke/Badge über CSS-Pseudo-Element */
 .editor-styles-wrapper .hide-mobile::before,
 .edit-post-visual-editor__post-area .hide-mobile::before,
 .wp-block .hide-mobile::before {
