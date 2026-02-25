@@ -82,7 +82,7 @@ npm run start
 This plugin is licensed under the GPL v2 or later.
 
 ```
-Hide Block On Mobile
+Triopsi Block Visibility
 Copyright (C) 2026
 
 This program is free software; you can redistribute it and/or modify

@@ -21,8 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Define plugin version as a constant for use in enqueuing assets.
 define( 'TRBLVI_VERSION', '2.0.0' );
 
-
-
 /**
  * Enqueue frontend CSS globally (so `hide-mobile` works even if the demo block is not used).
  */

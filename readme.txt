@@ -1,4 +1,4 @@
-=== Hide Block On Mobile ===
+=== Triopsi Block Visibility ===
 Contributors:      triopsi
 Tags:              block, gutenberg, responsive, mobile, hide
 Requires at least: 6.9
@@ -12,7 +12,7 @@ Control block visibility on mobile and desktop devices with simple toggle contro
 
 == Description ==
 
-Hide Block On Mobile extends the WordPress block editor (Gutenberg) by adding responsive visibility controls to every block's settings sidebar. Control which blocks appear on mobile devices, desktop devices, or both.
+Triopsi Block Visibility extends the WordPress block editor (Gutenberg) by adding responsive visibility controls to every block's settings sidebar. Control which blocks appear on mobile devices, desktop devices, or both.
 
 **Key Features:**
 
@@ -34,7 +34,7 @@ Both options can be used simultaneously if needed (useful for draft content or A
 
 1. Log in to your WordPress admin panel
 2. Navigate to Plugins > Add New
-3. Search for "Hide Block On Mobile"
+3. Search for "Triopsi Block Visibility"
 4. Click "Install Now" and then "Activate"
 * **Center on Mobile** - Center blocks on screens smaller than 768px
 
