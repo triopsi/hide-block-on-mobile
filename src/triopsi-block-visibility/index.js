@@ -1,6 +1,4 @@
 import { addFilter } from '@wordpress/hooks';
-import './style.scss';
-import './editor.scss';
 
 import { registerEditorFilters } from './edit';
 import { registerSaveFilters } from './save';
@@ -31,7 +29,7 @@ function addHideOnMobileAttribute( settings, name ) {
 
 addFilter(
 	'blocks.registerBlockType',
-	'hbom/add-hide-on-mobile-attribute',
+	'trblvi/add-triopsi-block-visibility-attribute',
 	addHideOnMobileAttribute
 );
 

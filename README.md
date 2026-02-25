@@ -31,7 +31,7 @@ This plugin extends the WordPress block editor (Gutenberg) by adding a "Responsi
 **No build process required!** Download the ready-to-use plugin:
 
 1. Go to the [Releases](../../releases) page
-2. Download the latest `hide-block-on-mobile.zip` file
+2. Download the latest `triopsi-block-visibility.zip` file
 3. In WordPress admin, go to Plugins → Add New → Upload Plugin
 4. Choose the downloaded ZIP file and click "Install Now"
 5. Activate the plugin
@@ -45,7 +45,7 @@ If you want to modify the plugin or build from source:
 2. Navigate to the plugin directory
 3. Run `npm install` to install dependencies
 4. Run `npm run build` to compile the assets
-5. Upload the `hide-block-on-mobile` folder to `/wp-content/plugins/`
+5. Upload the `triopsi-block-visibility` folder to `/wp-content/plugins/`
 6. Activate the plugin through the 'Plugins' menu in WordPress
 
 ## Usage

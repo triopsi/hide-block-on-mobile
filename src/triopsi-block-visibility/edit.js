@@ -18,13 +18,13 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 				<BlockEdit { ...props } />
 				<InspectorControls>
 					<PanelBody
-						title={ __( 'Responsive', 'hide-block-on-mobile' ) }
+						title={ __( 'Responsive', 'triopsi-block-visibility' ) }
 						initialOpen={ true }
 					>
 						<ToggleControl
 							label={ __(
 								'Hide on mobile',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 							checked={ !! hideOnMobile }
 							onChange={ ( value ) =>
@@ -32,13 +32,13 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 							}
 							help={ __(
 								'Hides this block on mobile devices (max-width: 768px).',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 						/>
 						<ToggleControl
 							label={ __(
 								'Hide on desktop',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 							checked={ !! hideOnDesktop }
 							onChange={ ( value ) =>
@@ -46,13 +46,13 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 							}
 							help={ __(
 								'Hides this block on desktop devices (min-width: 769px).',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 						/>
 						<ToggleControl
 							label={ __(
 								'Center on mobile',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 							checked={ !! centerOnMobile }
 							onChange={ ( value ) =>
@@ -60,7 +60,7 @@ export const withHideOnMobileToggle = createHigherOrderComponent(
 							}
 							help={ __(
 								'Centers this block on mobile devices (max-width: 768px).',
-								'hide-block-on-mobile'
+								'triopsi-block-visibility'
 							) }
 						/>
 					</PanelBody>
@@ -104,13 +104,13 @@ export const withHideMobileClassInEditor = createHigherOrderComponent(
 export function registerEditorFilters() {
 	addFilter(
 		'editor.BlockEdit',
-		'hbom/with-hide-on-mobile-toggle',
+		'trblvi/with-triopsi-block-visibility-toggle',
 		withHideOnMobileToggle
 	);
 
 	addFilter(
 		'editor.BlockListBlock',
-		'hbom/with-hide-mobile-class-in-editor',
+		'trblvi/with-hide-mobile-class-in-editor',
 		withHideMobileClassInEditor
 	);
 }

@@ -1,45 +1,57 @@
-name: Build and Release
-
+# This workflow handles the release process for the plugin, including deploying to the WordPress.org repository and creating a GitHub release with the generated zip file as an asset.
+# It is triggered when a new release is published on GitHub. The workflow checks out the code, verifies that the version in the code matches the release tag, deploys the plugin to the WordPress.org repository, and then creates a GitHub release with the generated zip file as an asset.
+name: Release to Wordpress.org
 on:
-    push:
-        tags:
-            - 'v*.*.*'
-    workflow_dispatch:
+  release:
+    types: [published]
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '20'
-                  cache: 'npm'
-
-            - name: Install dependencies
-              run: npm ci
-
-            - name: Build plugin
-              run: npm run build
-
-            - name: Create plugin archive
-              run: |
-                  mkdir -p release
-                  rsync -av --exclude-from='.distignore' . release/hide-block-on-mobile/
-                  cd release
-                  zip -r hide-block-on-mobile.zip hide-block-on-mobile/
-
-            - name: Create Release and Upload Asset
-              uses: softprops/action-gh-release@v2
-              with:
-                  files: release/hide-block-on-mobile.zip
-                  generate_release_notes: true
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy_to_wp_repository:
+    if: github.repository == 'triopsi/triopsi-block-visibility'
+    name: Deploy to WP.org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache/files
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - name: Verify version matches release tag
+        run: bin/check-version.sh
+      - name: Install Composer dependencies (no dev)
+        run: composer install --no-dev --prefer-dist --no-interaction --no-progress
+      - name: Optimize Composer autoload
+        run: composer dump-autoload -o
+      - name: Install npm dependencies
+        run: npm ci
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: tinify/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: true
+        env:
+          SLUG: triopsi-block-visibility
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: ${{ github.workspace }}/triopsi-block-visibility.zip
+          generate_release_notes: true

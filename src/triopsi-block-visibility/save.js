@@ -37,7 +37,7 @@ export function addHideMobileClassOnSave( extraProps, blockType, attributes ) {
 export function registerSaveFilters() {
 	addFilter(
 		'blocks.getSaveContent.extraProps',
-		'hbom/add-hide-mobile-class-on-save',
+		'trblvi/add-hide-mobile-class-on-save',
 		addHideMobileClassOnSave
 	);
 }

@@ -1,11 +1,29 @@
 {
-    "require-dev": {
-        "wp-coding-standards/wpcs": "^3.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.2"
-    },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+  "name": "triopsi/triopsi-block-visibility",
+  "homepage": "https://triopsi.com",
+  "type": "project",
+  "version": "2.0.1",
+  "authors": [
+    {
+      "name": "Daniel Drevermann",
+      "email": "daniel@triopsi.com"
     }
+  ],
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "platform": {
+      "php": "8.0.0"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0",
+    "squizlabs/php_codesniffer": "^3.13.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  }
 }
