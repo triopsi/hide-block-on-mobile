@@ -70,7 +70,7 @@ msgstr "Blendet diesen Block auf Mobilgeräten aus (max-width: 768px)."
 
 ## Alternative: Use Loco Translate Plugin
 1. Install "Loco Translate" plugin in WordPress
-2. Go to Loco Translate → Plugins → Hide Block On Mobile
+2. Go to Loco Translate → Plugins → Triopsi Block Visibility
 3. Add translations through the UI
 4. Export .po/.mo files
 
