@@ -68,3 +68,8 @@ release/
 
 # Backups
 *.bak
+
+# Specials for this plugin
+src/
+vite.frontend.config.js
+vendor/
