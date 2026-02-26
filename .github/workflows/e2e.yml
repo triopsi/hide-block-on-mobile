@@ -33,7 +33,6 @@ jobs:
       - name: Install npm deps
         run: |
           npm ci
-          npm run build
 
       - name: Install Playwright browsers
         run: |
