@@ -73,3 +73,4 @@ release/
 src/
 vite.frontend.config.js
 vendor/
+release/
