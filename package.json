@@ -13,9 +13,15 @@
     "dev:editor": "vite build --watch --config vite.config.js",
     "dev:styles": "vite build --watch --config vite.frontend.config.js",
     "dev": "npm run dev:editor & npm run dev:styles",
-    "plugin-zip": "mkdir -p release && rsync -av --delete --exclude-from=\".distignore\" ./ release/triopsi-block-visibility/ && cd release && zip -r triopsi-block-visibility.zip triopsi-block-visibility && cd .."
+    "plugin-zip": "mkdir -p release && rsync -av --delete --exclude-from=\".distignore\" ./ release/triopsi-block-visibility/ && cd release && zip -r triopsi-block-visibility.zip triopsi-block-visibility && cd ..",
+    "wp-env": "wp-env",
+    "wp:start": "wp-env start",
+    "wp:stop": "wp-env stop",
+    "wp:destroy": "wp-env destroy",
+    "wp:cli": "wp-env run cli"
   },
   "devDependencies": {
+    "@wordpress/env": "^11.0.0",
     "sass": "^1.83.0",
     "vite": "^7.3.1"
   }

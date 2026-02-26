@@ -8,7 +8,7 @@
     "SCRIPT_DEBUG": true,
     "WP_MAIL_DISABLED": true
   },
-  "mappings": {
-    "wp-content/plugins/triopsi-block-visibility": "."
-  }
+  "plugins": [
+    "."
+  ]
 }
