@@ -5,6 +5,13 @@
 </p>
 
 # Triopsi Block Visibility
+![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/triopsi-block-visibility)
+![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/triopsi-block-visibility)
+![WordPress Tested](https://img.shields.io/wordpress/plugin/tested/triopsi-block-visibility)
+![License](https://img.shields.io/github/license/triopsi/triopsi-block-visibility)
+![Issues](https://img.shields.io/github/issues/triopsi/triopsi-block-visibility)
+![GitHub Release](https://img.shields.io/github/v/release/triopsi/triopsi-block-visibility)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/triopsi/triopsi-block-visibility/release.yml)
 
 A WordPress plugin that adds responsive visibility controls to the block inspector, allowing you to hide any Gutenberg block on mobile or desktop devices.
 
